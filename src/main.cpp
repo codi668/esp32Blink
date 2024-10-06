@@ -66,6 +66,19 @@ void loop()
         printf("Elektronik und Technische Informatik ist super stark!!!");
 
     }
+
+    if (Serial.available() > 0) 
+    {
+        String data = Serial.readString();
+        if (data.indexOf('x') != -1)
+        {
+            // x received
+            flag = TRUE;
+            printf("\nx received!\n");
+        }
+
+    }
+
 }
 
 
@@ -84,7 +97,6 @@ void IRAM_ATTR myTimer(void)   // periodic timer interrupt, expires each 0.1 mse
         flag = TRUE;
         count = 0;
     }
-
 
 
     // PWM:
