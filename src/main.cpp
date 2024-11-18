@@ -3,6 +3,8 @@
                                                                       қuran oct 2024
 **************************************************************************************/
 #include <Arduino.h>
+#include <sdtio.h>
+#include <string.h>
 
 #define TRUE                             1
 #define FALSE                            0
